@@ -1,0 +1,39 @@
+.reviews {
+    &__list{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        flex:1;
+        height:100%;
+        max-height: 700px;
+        position: relative;
+        max-width: calc(100%/2 - 10px);
+        background-color:#F3F3F3;
+        padding:30px;
+        display:flex;
+    }
+
+    &__image {
+        overflow: hidden;
+        border-radius: 50%;
+        width:100%;
+        min-height:100%;
+        max-height: 221px;
+        max-width: 221px;
+        height:100%;
+        flex: 1;
+
+        img {
+            width: 100%;
+            height:100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__content {
+        flex: 1;
+    }
+}

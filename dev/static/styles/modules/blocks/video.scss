@@ -1,0 +1,32 @@
+.video {
+    width:100%;
+    height:auto;
+    position: relative;
+    height:70vh;
+
+    &__bg {
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__button {
+        background-image: url("data:image/svg+xml,%3Csvg width='42' height='49' viewBox='0 0 42 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M42 24.5L0.750002 48.3157L0.750004 0.6843L42 24.5Z' fill='%23C4C4C4'/%3E%3C/svg%3E%0A");
+        width: 55px;
+        height:55px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+}

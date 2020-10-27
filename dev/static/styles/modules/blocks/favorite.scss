@@ -1,0 +1,30 @@
+.favorite {
+    position: relative;
+    svg {
+        fill: $red;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+    }
+
+    &__count {
+        position: absolute;
+        top:1px;
+        right:-2px;
+        border-radius: 50%;
+        background-color: $red;
+        width:11px;
+        height:11px;
+        font-size: 8px;
+        color:$white;
+        text-align: center;
+    }
+}
+
+.index-page {
+    .favorite {
+        svg {
+            fill: $white;
+            transition: 0.2s ease-in-out;
+        }
+    }
+}

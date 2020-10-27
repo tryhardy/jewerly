@@ -1,1 +1,87 @@
 header { flex: 0 0 auto; }
+.header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    position: sticky;
+    margin-bottom: calc(-1 * var(--header-height));
+    transition: 0.3s ease-in-out;
+    border-bottom: 1px solid $black;
+    
+
+    &__top {
+        padding-top:20px;
+        color:$red;
+    }
+
+    &__bottom {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        color:$white;
+    }
+
+    &:hover,
+    &--light {
+        background-color:$white;
+        border-bottom: 1px solid $black;
+
+        
+
+        .logo__text,
+        .header__top,
+        .header__bottom,
+        .menu-top {
+            color:$black;
+        }
+            
+        .search__button {
+            background-image: url("data:image/svg+xml,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='9' cy='9' r='8' stroke='%23C80202' stroke-width='2'/%3E%3Cline x1='14.7071' y1='14.2929' x2='19.7071' y2='19.2929' stroke='%23C80202' stroke-width='2'/%3E%3C/svg%3E");
+        }
+        .favorite {
+            svg {
+                fill:$red;
+            }
+        }
+        .cart-line {
+            svg {
+                fill:$red;
+            }
+        }
+    }
+
+}
+
+.index-page {
+    .header {
+        border-bottom: 1px solid $white;
+
+        &__top {
+            color:$white;
+        }
+    }
+
+    .header--light {
+        border-bottom: 1px solid $black;
+    }
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 79.68%;
+        color:inherit;
+        transition: color 0.2s ease-in-out;
+    }
+
+    &__img {
+        margin:0 6px;
+    }
+}
