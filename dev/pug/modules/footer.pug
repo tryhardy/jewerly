@@ -1,6 +1,7 @@
 footer.footer
-    .container
-        .footer__top
+
+    .footer__top
+        .container.container--flex
             .footer__column
                 h4.footer__column-title Каталог товаров
                 .footer-menu
@@ -33,19 +34,22 @@ footer.footer
                             a(href="").footer-menu__link Контакты
             .footer__column
                 h4.footer__column-title Контактная информация
-                .footer-content
-                    a 8 (495) 000-00-00
+                .footer__content
+                    a 8 (495) 000-00-00<br>
                     a info@spartak-jewelry.ru
                     p Главный офис:
                     p 123060, г. Москва
                     p ул. Новый Арбат, д.1
             .footer__column
                 h4.footer__column-title Принимаем к оплате на сайте
-                .footer-content
+                .footer__content
                     .payments-list
-                        img(src="static/images/common/visa.png")
-                        img(src="static/images/common/mastercard.png")
-                        img(src="static/images/common/maestro.png")
+                        .payments-list__item
+                            img(src="static/images/common/visa.png")
+                        .payments-list__item
+                            img(src="static/images/common/mastercard.png")
+                        .payments-list__item
+                            img(src="static/images/common/maestro.png")
 
                     .socials
                         ul.socials__list
@@ -69,7 +73,8 @@ footer.footer
                                     <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17.2181 0.00878906H5.76368C2.59001 0.00878906 0 2.5988 0 5.77247V17.2451C0 20.4005 2.59001 22.9905 5.76368 22.9905H17.2363C20.41 22.9905 23 20.4005 23 17.2269V5.77247C22.9818 2.5988 20.3918 0.00878906 17.2181 0.00878906ZM17.1998 8.61783C17.1998 8.74551 17.1998 8.87318 17.1998 9.00086C17.1998 12.8312 14.245 17.2451 8.82791 17.2451C7.16812 17.2451 5.61776 16.7709 4.32276 15.9501C4.55987 15.9683 4.77875 15.9866 5.01586 15.9866C6.40206 15.9866 7.66059 15.5306 8.66376 14.7463C7.36875 14.7281 6.29262 13.889 5.9096 12.74C6.09199 12.7764 6.27439 12.7947 6.45678 12.7947C6.73037 12.7947 7.00397 12.7582 7.24108 12.6852C5.92783 12.4116 4.92466 11.2443 4.92466 9.83988V9.8034C5.28945 10.0223 5.76368 10.1499 6.23791 10.1682C5.45361 9.65748 4.92466 8.76375 4.92466 7.76057C4.92466 7.23163 5.07058 6.73916 5.32593 6.30141C6.78509 8.05241 8.93735 9.20149 11.3814 9.32917C11.3267 9.1103 11.3085 8.89142 11.3085 8.67255C11.3085 7.06747 12.6217 5.77247 14.245 5.77247C15.0841 5.77247 15.8501 6.11902 16.3973 6.68444C17.0722 6.55677 17.6923 6.31965 18.2577 5.9731C18.0389 6.64796 17.5646 7.21339 16.9627 7.57818C17.5646 7.50522 18.1301 7.3593 18.659 7.12219C18.2577 7.70585 17.7653 8.21656 17.1998 8.61783Z" fill="#C1C1C1"/>
                                     </svg>
-        .footer__bottom
+    .footer__bottom
+        .container
             p.copyright © Все права защищены 2020 | Интернет-магазин ювелирных изделий ФК «Спартак» 
-            p.copyright Продолжая работу с сайтом, вы даете согласие на использование сайтом cookies и обработку персональных данных.
+            p.copyright Продолжая работу с сайтом, вы даете согласие на использование сайтом cookies и <a>обработку персональных данных</a>.
 

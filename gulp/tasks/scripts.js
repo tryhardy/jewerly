@@ -6,9 +6,14 @@ const argv = require('yargs').argv;
 const gulpif = require('gulp-if');
 
 // Работа со скриптами
+const scripts = [
+  'node_modules/jquery/dist/jquery.min.js',
+  'node_modules/slick-carousel/slick/slick.min.js',
+  'dev/static/js/main.js'
+];
 
 module.exports = function script() {
-  return gulp.src('dev/static/js/*.js')
+  return gulp.src(scripts)
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(babel({

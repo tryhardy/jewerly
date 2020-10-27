@@ -27,9 +27,8 @@ function lightHeader(){
 function squarePic(currentClass){
 
     $(currentClass).each(function(){
-        /*let height = $(this).css("height");
+        let height = $(this).css("height");
         console.log(height);
         $(this).css("width", height);
-        $(this).css("min-height", height);*/
     });
 }

@@ -23,6 +23,10 @@ body {
   line-height: 1.5;
 }
 
+button {
+  cursor: pointer;
+}
+
 *,
 *::before,
 *::after { box-sizing: border-box; }
@@ -77,6 +81,11 @@ button { outline: none; }
   width: 100%;
   max-width:1270px;
   padding:0 15px;
+}
+
+.container--flex {
+  display: flex;
+  justify-content: space-between;
 }
 
 svg {
