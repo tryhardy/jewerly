@@ -9,7 +9,7 @@ $(document).ready(function(){
     });
 
     lightHeader();
-    squarePic(".reviews__image");
+    squarePic(".reviews__image-wrapper");
 
     $(window).on("scroll", function(e){
         lightHeader();
@@ -30,5 +30,6 @@ function squarePic(currentClass){
         let height = $(this).css("height");
         console.log(height);
         $(this).css("width", height);
+        //$(this).css("height", height);
     });
 }

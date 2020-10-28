@@ -16,9 +16,6 @@
     }
 
     &__image {
-        overflow: hidden;
-        border-radius: 50%;
-
         flex: 1;
 
         img {
@@ -27,9 +24,43 @@
             object-fit: cover;
             object-position: center;
         }
+
+        &-wrapper {
+            max-width: 221px;
+            max-height: 221px;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-right: 50px;
+        }
     }
 
     &__content {
         flex: 1;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 200;
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 0;
+    }
+
+    &__date {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 9px;
+        line-height: 16px;
+        color:$gray;
+    }
+
+    &__text{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        margin-top:35px;
     }
 }

@@ -133,7 +133,8 @@ block content
 				.reviews__list
 					.reviews__item
 						.reviews__image
-							img(src="static/images/common/review1.png")
+							.reviews__image-wrapper
+								img(src="static/images/common/review1.png")
 						.reviews__content
 							h4.reviews__title Иван Петров
 							.reviews__date 2020-10-26
@@ -141,10 +142,12 @@ block content
 
 					.reviews__item
 						.reviews__image
-							img(src="static/images/common/review2.png")
+							.reviews__image-wrapper
+								img(src="static/images/common/review2.png")
 						.reviews__content
 							h4.reviews__title Мария Иванова
 							.reviews__date 2020-10-26
+							.reviews__text-wrapper
 							.reviews__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
 
 				.reviews__more
