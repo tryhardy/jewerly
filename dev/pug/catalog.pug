@@ -1,0 +1,53 @@
+extends layout/minor
+include ../ui-kit/ui-product/index
+
+block variables
+	-var title = 'Главная страница'
+
+block content
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				+breadcrumbs-item('Главная','/')
+				+breadcrumbs-item('Колье')
+	section.products-section
+		.container
+			.title 
+				h2 Колье
+			.products
+				.sort
+					.sort__wrapper
+						p.sort__desc Сортировать:
+						a(href="catalog.html").sort__link.sort__link--active по популярности
+						a(href="catalog.html").sort__link по возрастанию цены
+						a(href="catalog.html").sort__link по убыванию цены
+						a(href="catalog.html").sort__link по алфавиту А-Я
+						a(href="catalog.html").sort__link по алфавиту Я-А
+
+				.popular-products__list
+					+productItem("Кольцо с драгоценным камнем", "10 000 ₽", "static/images/common/product1.jpg", "static/images/common/product2.jpg", true)
+					+productItem("Золотая подвеска", "10 000 ₽", "static/images/common/product2.jpg", "static/images/common/product1.jpg")
+					+productItem("Подвеска с драгоценным камнем", "10 000 ₽", "static/images/common/product3.jpg", "static/images/common/product4.jpg")
+					+productItem("Кольцо с инкрустацией", "10 000 ₽", "static/images/common/product4.jpg","static/images/common/product5.jpg")
+					+productItem("Серьги с драгоценными камнями", "10 000 ₽", "static/images/common/product5.jpg", "static/images/common/product4.jpg")
+					+productItem("Подвеска с драгоценными камнями", "10 000 ₽", "static/images/common/product6.jpg", "static/images/common/product5.jpg")
+			
+			.navigation
+				.navigation__arrows
+					span.navigation__arrow.navigation__arrow--prev.navigation__arrow--disabled 
+						<svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0.646446 3.64645C0.451184 3.84171 0.451184 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM11 3.5L1 3.5V4.5L11 4.5V3.5Z" fill="#B0B0B0"/>
+						</svg>
+						span Пред
+					.navigation__pages
+						span.navigation__page.navigation__current-page 1
+						a.navigation__page(href="/catalog.html?PAGEN_1=2") 2
+						a.navigation__page(href="/catalog.html?PAGEN_2=3") 3
+						a.navigation__page(href="/catalog.html?PAGEN_3=3") 4
+					a(href="/catalog.html?PAGEN_1=2").navigation__arrow.navigation__arrow--next 
+						span След
+						<svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0.646446 3.64645C0.451184 3.84171 0.451184 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM11 3.5L1 3.5V4.5L11 4.5V3.5Z" fill="#B0B0B0"/>
+						</svg>
+
+

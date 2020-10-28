@@ -5,7 +5,7 @@ header { flex: 0 0 auto; }
     left: 0;
     z-index: 5;
     position: sticky;
-    margin-bottom: calc(-1 * var(--header-height));
+    background-color: $white;;
     transition: 0.3s ease-in-out;
     border-bottom: 1px solid $black;
     
@@ -19,7 +19,7 @@ header { flex: 0 0 auto; }
         display:flex;
         justify-content: space-between;
         align-items: center;
-        color:$white;
+        color:$black;
     }
 
     &:hover,
@@ -56,9 +56,23 @@ header { flex: 0 0 auto; }
 .index-page {
     .header {
         border-bottom: 1px solid $white;
+        margin-bottom: calc(-1 * var(--header-height));
+        background-color: transparent;
 
         &__top {
             color:$white;
+        }
+
+        &__bottom {
+            color:$white;
+        }
+
+        &:hover {
+            background-color: $white;
+        }
+
+        &--light {
+            background-color: $white;
         }
     }
 

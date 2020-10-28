@@ -1,0 +1,10 @@
+mixin nav()
+    .navigation
+        .navigation__arrows
+            span.navigation__arrow.navigation__arrow--prev.navigation__arrow--disabled
+		    .navigation__pages
+			    span.navigation__current-page 1
+			    a.navigation__page(href="/catalog.html?PAGEN_1=2") 2
+                a.navigation__page(href="/catalog.html?PAGEN_2=3") 2
+                a.navigation__page(href="/catalog.html?PAGEN_3=3") 2
+            a(href="catalog.html").navigation__arrow.navigation__arrow--next.navigation__arrow--disabled   

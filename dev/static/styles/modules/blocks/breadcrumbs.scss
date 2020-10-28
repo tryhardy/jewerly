@@ -1,0 +1,50 @@
+.breadcrumbs {
+    margin: 25px 0 55px 0;
+
+    &__list {
+
+    }
+
+    &__item {
+        display: inline-block;
+        margin-right: 20px;
+        padding-right: 20px;
+        position: relative;
+        line-height: 1;
+        vertical-align: middle;
+
+        &:after {
+            content: "";
+            width: 1px;
+            height: 100%;
+            display: inline-block;
+            background-color: $black;
+            position: absolute;
+            right: 0;
+        }
+
+        &:last-child {
+            margin-right:0px;
+
+            &:after {
+                background-color: transparent;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    &__text {
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 19px;
+        color:$red;
+        font-weight: 500;
+    }
+}

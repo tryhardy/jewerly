@@ -76,3 +76,9 @@ footer { flex: 0 0 auto; }
         height:auto;
     }
 }
+
+.footer-menu {
+    &__item {
+        margin-bottom:10px;
+    }
+}

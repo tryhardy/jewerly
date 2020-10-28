@@ -1,7 +1,7 @@
-mixin productItem(name, price, picUrl, colormark=false)
+mixin productItem(name, price, picUrl, picUrlSecond, colormark=false)
     .popular-products__item
         a(href="product.html")
-            .popular-products__content
+            .popular-products__content(style=`background-image:url(${picUrlSecond})`)
                 img(src=`${picUrl}`)
                 .popular-products__block
                     if colormark

@@ -6,6 +6,7 @@
     img {
         width: 100%;
         height: auto;
+        transition: 10s;
     }
 
     &__list{
@@ -19,6 +20,13 @@
         max-height: 700px;
         position: relative;
         max-width: calc(100%/3 - 13px);
+        overflow: hidden;
+
+        &:hover {
+            img {
+                transform: scale(1.5);
+            }
+        }
     }
 
     &__content {
@@ -54,12 +62,19 @@
         height:100%;
         margin-bottom:20px;
         position: relative;
+        overflow: hidden;
         
         img {
             width:100%;
             height:100%;
             object-fit: cover;
             object-position: center;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.5);
+            }
         }
     }
 }
