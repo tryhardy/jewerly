@@ -30,6 +30,11 @@ footer { flex: 0 0 auto; }
         margin-bottom:25px;
     }
 
+    &__column--flex {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__menu-link {
         font-style: normal;
         font-weight: normal;
@@ -44,6 +49,13 @@ footer { flex: 0 0 auto; }
 
     &__content a {
         font-weight: 700;
+    }
+
+    &__content--flex {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
 

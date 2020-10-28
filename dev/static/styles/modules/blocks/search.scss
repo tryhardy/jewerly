@@ -1,3 +1,7 @@
+.search {
+    margin-left:20px;
+}
+
 .search__input {
     display:none;
 }
@@ -10,4 +14,9 @@
     background-color:transparent;
     background-image: url("data:image/svg+xml,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='9' cy='9' r='8' stroke='white' stroke-width='2'/%3E%3Cline x1='14.7071' y1='14.2929' x2='19.7071' y2='19.2929' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
     transition: 0.2s ease-in-out;
+}
+
+.search__form {
+    display: flex;
+    align-items: center;
 }

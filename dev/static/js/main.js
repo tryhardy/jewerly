@@ -14,6 +14,10 @@ $(document).ready(function(){
     $(window).on("scroll", function(e){
         lightHeader();
     })
+
+    $(window).resize(function(){
+        squarePic(".reviews__image-wrapper");
+    });
 });
 
 function lightHeader(){

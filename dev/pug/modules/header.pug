@@ -8,8 +8,40 @@ header.header
         .header__bottom
             nav.menu-top
                 ul.menu-top__list
-                    - var menu = [{name:"Каталог", link:"catalog.html"},{name:"Спецпредложения", link:"offers.html"},{name:"Доставка и оплата", link:"delivery.html"},{name:"Сотрудничество", link:"partnership.html"},{name:"О компании", link:"about.html"},{name:"Контакты", link:"contacts.html"}];
+                    - var menu = [{name:"Спецпредложения", link:"offers.html"},{name:"Доставка и оплата", link:"delivery.html"},{name:"Сотрудничество", link:"partnership.html"},{name:"О компании", link:"about.html"},{name:"Контакты", link:"contacts.html"}];
                     
+                    li.menu-top__item
+                        a(href="catalog.html").menu-top__link Каталог
+                        .menu-top__submenu
+                            .container
+                                .menu-top__submenu-title Украшения
+                                .menu-top__submenu-wrapper
+                                    ul.menu-top__submenu-list
+                                        - var submenu = [{name:"Колье", link:"catalog.html"},{name:"Серьги", link:"catalog.html"},{name:"Подвески", link:"catalog.html"}];
+
+                                        each item in submenu
+                                            li.menu-top__submenu-item
+                                                a(href=`${item.link}`).menu-top__submenu-link= item.name
+
+                                    ul.menu-top__submenu-list
+                                        - var submenu = [{name:"Браслеты", link:"catalog.html"},{name:"Кольца", link:"catalog.html"},{name:"Цепочки", link:"catalog.html"}];
+
+                                        each item in submenu
+                                            li.menu-top__submenu-item
+                                                a(href=`${item.link}`).menu-top__submenu-link= item.name
+
+                                    ul.menu-top__submenu-list
+                                        - var submenu = [{name:"Кулоны", link:"catalog.html"},{name:"Шармы", link:"catalog.html"},{name:"Броши", link:"catalog.html"}];
+
+                                        each item in submenu
+                                            li.menu-top__submenu-item
+                                                a(href=`${item.link}`).menu-top__submenu-link= item.name
+
+                                    .offers-block
+                                        a(href="gift.html")
+                                            img(src="static/images/common/gift2.jpg")
+                                            .offers-block__text Специальное предложение
+
                     each item in menu
                         li.menu-top__item
                             a(href=`${item.link}`).menu-top__link= item.name
