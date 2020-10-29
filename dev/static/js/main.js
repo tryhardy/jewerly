@@ -18,6 +18,40 @@ $(document).ready(function(){
     $(window).resize(function(){
         squarePic(".reviews__image-wrapper");
     });
+
+    /*$('.slider-single').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots:false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+
+    $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-single',
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true
+      });*/
+
+      $(".product__tabs").on("click", ".product__tab:not(.active)", function() {
+        $(this)
+          .addClass("active")
+          .siblings()
+          .removeClass("active")
+          .closest("#tabs")
+          .find(".product__tabs-content-item")
+          .removeClass("active")
+          .eq($(this).index())
+          .addClass("active");
+
+        $(".product__tabs-wrapper").css("transform", "translateX(" + ($(this).index() * -1 * 100) + "%)");
+      });
+
 });
 
 function lightHeader(){

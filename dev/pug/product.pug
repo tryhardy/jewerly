@@ -1,0 +1,78 @@
+extends layout/minor
+include ../ui-kit/ui-product/index
+
+block variables
+	-var title = 'Главная страница'
+
+block content
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				+breadcrumbs-item('Главная','/')
+				+breadcrumbs-item('Колье', 'catalog.html')
+				+breadcrumbs-item('Название товара')
+	section.products-section
+		.container
+			.product
+				.product__content
+					.product__wrapper
+						.product__column.product__column--pic
+							.slider
+								.slider-single
+									.slider-single__item(style="background-image:url(static/images/common/product4.jpg)") 
+										img(src="static/images/common/product4.jpg")
+									.slider-single__item(style="background-image:url(static/images/common/product4.jpg)") 
+										img(src="static/images/common/product4.jpg")
+									.slider-single__item(style="background-image:url(static/images/common/product4.jpg)") 
+										img(src="static/images/common/product4.jpg")
+								.slider-nav
+									.slider-nav__item(style="background-image:url(static/images/common/product4.jpg)") 
+										img(src="static/images/common/product4.jpg")
+									.slider-nav__item(style="background-image:url(static/images/common/product4.jpg)") 
+										img(src="static/images/common/product4.jpg")
+									.slider-nav__item(style="background-image:url(static/images/common/product4.jpg)")
+										img(src="static/images/common/product4.jpg")
+						.product__column
+							.product__info
+								.product__instock В наличии
+								.product__article #000000000000
+								.product__title Название товара
+								.product__subtitle Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+								.product__price 10 000 ₽
+								.product__colors
+									.product__colors-title Цвет
+									.product__colors-list
+										.product__colors-item
+											img(src="static/images/color1.jpg")
+										.product__colors-item
+											img(src="static/images/color2.jpg")
+								.product__count
+									.product__count-title Количество
+									.product__count-block
+										input(type="text" value="1")
+										a.product__count-add
+										a.product__count-remove
+								.product__tocart
+									a(href="order.html").button.toCart Оформить заказ
+					.product__description
+						#tabs
+							.product__tabs
+								.product__tab.active(data-tab=1) Детали
+								.product__tab(data-tab=2) Характеристики
+							.product__tabs-content
+								.product__tabs-wrapper
+									.product__tabs-content-item.active(data-tab=1)
+										.product__tab-container
+											p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+									.product__tabs-content-item.active(data-tab=2)
+										.product__tab-container
+											p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.
+
+			
+			.products
+				h3.simple-title С этим товаром также покупают
+				.popular-products__list
+					+productItem("Кольцо с драгоценным камнем", "10 000 ₽", "static/images/common/product1.jpg", "static/images/common/product2.jpg", true)
+					+productItem("Золотая подвеска", "10 000 ₽", "static/images/common/product2.jpg", "static/images/common/product1.jpg")
+					+productItem("Подвеска с драгоценным камнем", "10 000 ₽", "static/images/common/product3.jpg", "static/images/common/product4.jpg")
+					

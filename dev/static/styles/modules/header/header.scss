@@ -28,12 +28,17 @@ header { flex: 0 0 auto; }
         border-bottom: 1px solid $black;
 
         
+        .logo {
+            text-decoration: none;
+            color:$red;
+        }
 
-        .logo__text,
+
         .header__top,
         .header__bottom,
         .menu-top {
             color:$black;
+
         }
             
         .search__button {
@@ -81,10 +86,14 @@ header { flex: 0 0 auto; }
     }
 }
 
+
+
 .logo {
+    color: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 
     &__text {
         font-style: normal;
