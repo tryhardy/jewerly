@@ -1,0 +1,37 @@
+.form {
+    &__row {
+        display: flex;
+        margin-bottom:20px;
+        input {
+            flex:1;
+            border: 1px solid $black;
+            padding:16px 27px;
+            margin-right: 20px;
+            width: 100%;
+            &:last-child {
+                margin-right:0px;
+            }
+            &::placeholder { 
+                color: $black;
+            }
+        }
+        textarea {
+            width:100%;
+            resize: vertical;
+            border: 1px solid $black;
+            padding:16px 27px;
+
+            &::placeholder { 
+                color: $black;
+            }
+        }
+
+    }
+
+    input[type="submit"]  {
+        border:0;
+        width: fit-content;
+        margin: auto;
+        padding:16px 50px;
+    }
+}

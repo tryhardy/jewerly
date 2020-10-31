@@ -1,0 +1,22 @@
+extends layout/minor
+
+block variables
+	-var title = 'Акция'
+
+block content
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				+breadcrumbs-item('Главная','/')
+				+breadcrumbs-item('Специальные предложения', "offers.html")
+				+breadcrumbs-item('Подарочный сертификат')
+	section.gift-section
+		.container
+			.gift
+				.gift__banner
+					img(src="static/images/common/offer1.png")
+				h2.gift__title Скидки до 30% на повторную покупку в течение 30 дней
+				.gift__content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				.gift__button
+					a(href="catalog.html").link Перейти в каталог
+

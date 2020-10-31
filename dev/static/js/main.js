@@ -19,14 +19,14 @@ $(document).ready(function(){
         squarePic(".reviews__image-wrapper");
     });
 
-    /*$('.slider-single').slick({
+    $('.slider-single').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         dots:false,
         fade: true,
-        asNavFor: '.slider-nav'
+        /*asNavFor: '.slider-nav'*/
     });
 
     $('.slider-nav').slick({
@@ -34,9 +34,11 @@ $(document).ready(function(){
         slidesToScroll: 1,
         asNavFor: '.slider-single',
         dots: false,
-        centerMode: true,
-        focusOnSelect: true
-      });*/
+        /*centerMode: true,*/
+        focusOnSelect: true,
+        infinite: true,
+        dots: false
+      });
 
       $(".product__tabs").on("click", ".product__tab:not(.active)", function() {
         $(this)
@@ -51,6 +53,7 @@ $(document).ready(function(){
 
         $(".product__tabs-wrapper").css("transform", "translateX(" + ($(this).index() * -1 * 100) + "%)");
       });
+
 
 });
 

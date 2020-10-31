@@ -44,6 +44,7 @@ ol, ul {
 img {
   max-width: 100%;
   display: block;
+  wisth:100%;
 }
 
 input,
@@ -66,6 +67,14 @@ section { position: relative; }
 input,
 select,
 button { outline: none; }
+
+.page p, 
+.page li {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 135.7%;
+  margin-bottom: 25px;
+}
 
 .wrapper {
   display: flex;
@@ -91,6 +100,17 @@ button { outline: none; }
 svg {
   fill:$black;
 }
+
+form .error,
+form  input.error,
+form  textarea.error {
+  border: 1px solid $red;
+
+  &::placeholder {
+    color: $red;
+  }
+}
+
 
 .section-title {
   text-align:center;
@@ -151,6 +171,16 @@ svg {
     text-align: center;
     margin-bottom:30px;
   }
+
+  &--simple {
+    h2 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 36px;
+      text-transform: none;
+      letter-spacing: normal;
+    }
+  }
 }
 
 .simple-title {
@@ -163,6 +193,92 @@ svg {
 a {
   text-decoration: none;
   color:$black;
+}
+
+.list {
+  li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 25px;
+
+
+    &:before {
+      content:"";
+      width:10px;
+      height:10px;
+      display: block;
+      background-color: #C4C4C4;
+      border-radius: 50%;
+      position: absolute;
+      top: 8px;
+      left: 0;
+    }
+  }
+}
+
+.documents {
+  padding:40px 0;
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 62px;
+    height: 62px;
+    margin-right: 16px;
+  }
+
+  span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    text-decoration-line: underline;
+  }
+}
+
+hr {
+
+  border: none; /* Убираем границу для браузера Firefox */
+  color: #B0B0B0; /* Цвет линии для остальных браузеров */
+  background-color: #B0B0B0; /* Цвет линии для браузера Firefox и Opera */
+  height: 1px; /* Толщина линии */
+  
+  margin: 40px 0;
+}
+
+.gallery {
+  display: grid;
+  grid-gap: 20px;
+
+  &-col-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    .gallery__pic {
+      height:25vh;
+    }
+  }
+
+  &-col-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .gallery__pic {
+      height:35vh;
+    }
+  }
+
+  &__pic {
+    display: block;
+
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 //Модули
 @import "modules/modules";

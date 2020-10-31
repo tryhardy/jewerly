@@ -1,0 +1,18 @@
+mixin giftItem(name, description, picUrl, colormark=false)
+    .gifts__item
+        img(src=`${picUrl}`)
+        if colormark
+            .gifts__content.gifts__content--dark
+
+                h3.gifts__title= name
+                h4.gifts__description=  description
+                .gifts__button
+                    a.link(href="gift.html") Перейти к акции
+        else
+            .gifts__content
+
+                h3.gifts__title= name
+                h4.gifts__description=  description
+                .gifts__button
+                    a.link(href="gift.html") Перейти к акции
+    

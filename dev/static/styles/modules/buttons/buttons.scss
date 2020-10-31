@@ -1,5 +1,5 @@
 .link {
-    color:$white;
+    color:inherit;
     padding:15px 20px; 
     text-transform: uppercase;
     text-decoration: none;
@@ -31,6 +31,13 @@
     font-size: 14px;
     line-height: 19px;
     letter-spacing: 0.075em;
+    border: 0;
+    width: fit-content;
+    
+    &--dark {
+        background-color: $black;
+        color: $white;
+    }
 }
 
 .toCart {

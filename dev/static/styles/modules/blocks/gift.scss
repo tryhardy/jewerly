@@ -1,0 +1,36 @@
+.gift-section {
+    padding:40px 0;
+    padding-bottom:80px;
+}
+
+.gift {
+    &__banner {
+        height: 30vh;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom:50px;
+
+        img {
+            width: 100%;
+            height:100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 33px;
+        margin-bottom: 10px;
+    }
+
+    &__content {
+        font-style: normal;
+        font-weight: 300;
+        margin-bottom:27px;
+        font-size: 18px;
+        line-height: 2;
+    }
+}
