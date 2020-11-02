@@ -1,0 +1,7 @@
+mixin productItem(name, picUrl)
+    .sections__item
+        a(href="catalog.html")
+            .sections__content
+                img(src=`${picUrl}`)
+                .sections__text
+                    h3.sections__title= name

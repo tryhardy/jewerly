@@ -1,0 +1,88 @@
+extends layout/minor
+
+block variables
+	-var title = 'Корзина'
+
+block content
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				+breadcrumbs-item('Главная','/')
+				+breadcrumbs-item('Корзина')
+	section.page-section
+		.container
+			.title
+				h2 Корзина
+			.page
+				.basket
+					form#basket_form(method='post' name='basket_form').basket__form
+						#basket_form_container.basket__container
+							#basket_items_list.basket__list
+								#basket_items.basket__items
+									.basket__list-headers
+										.basket__list-header Украшение
+										.basket__list-header Количество
+										.basket__list-header Сумма заказа
+									.basket__item
+										.basket__item-content
+											.basket__item-info
+												.basket__item-pic
+													img(src="static/images/common/product1.jpg")
+												.basket__item-text
+													a.basket__item-title(href='product.html') Название товара
+													.basket__item-desc
+														.basket__item-price 10000 ₽
+
+											.basket__item-qty
+												.basket__item-qty-block
+													input.basket__item-qty-input(type='text' value="1")
+													.basket__item-qty-control
+														a.basket__item-qty-add
+														a.basket__item-qty-remove
+													
+											.basket__item-summ
+												span 10000 ₽
+									.basket__item
+										.basket__item-content
+											.basket__item-info
+												.basket__item-pic
+													img(src="static/images/common/product1.jpg")
+												.basket__item-text
+													a.basket__item-title(href='product.html') Название товара
+													.basket__item-desc
+														.basket__item-price 10000 ₽
+
+											.basket__item-qty
+												.basket__item-qty-block
+													input.basket__item-qty-input(type='text' value="1")
+													.basket__item-qty-control
+														a.basket__item-qty-add
+														a.basket__item-qty-remove
+													
+											.basket__item-summ
+												span 10000 ₽
+									.basket__item
+										.basket__item-content
+											.basket__item-info
+												.basket__item-pic
+													img(src="static/images/common/product1.jpg")
+												.basket__item-text
+													a.basket__item-title(href='product.html') Название товара
+													.basket__item-desc
+														.basket__item-price 10000 ₽
+
+											.basket__item-qty
+												.basket__item-qty-block
+													input.basket__item-qty-input(type='text' value="1")
+													.basket__item-qty-control
+														a.basket__item-qty-add
+														a.basket__item-qty-remove
+													
+											.basket__item-summ
+												span 10000 ₽
+							
+								.basket__total
+									span Всего к оплате: 
+									span 10000 ₽
+								a.button.basket__order(href='order.html') Оформить заказ
+				

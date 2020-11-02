@@ -1,0 +1,30 @@
+extends layout/minor
+include ../ui-kit/ui-section/index
+
+block variables
+	-var title = 'Главная страница'
+
+block content
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				+breadcrumbs-item('Главная','/')
+				+breadcrumbs-item('Каталог')
+	section.sections-section
+		.container
+			.section-title
+				h2 каталог украшений
+			.sections
+				.sections__list
+					+productItem("Колье", "static/images/sections/1.png")
+					+productItem("Браслеты", "static/images/sections/2.png")
+					+productItem("Кулоны", "static/images/sections/3.png")
+					+productItem("Серьги", "static/images/sections/4.png")
+					+productItem("Кольца", "static/images/sections/5.png")
+					+productItem("Шармы", "static/images/sections/6.png")
+					+productItem("Подвески", "static/images/sections/7.png")
+					+productItem("Цепочки", "static/images/sections/8.png")
+					+productItem("Броши", "static/images/sections/9.png")
+			
+	
+

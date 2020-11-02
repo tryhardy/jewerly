@@ -1,0 +1,71 @@
+.sections {
+    margin-bottom:40px;
+    
+
+
+    &__list {
+        display:grid;
+        grid-gap:20px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__content {
+        position:relative;
+        overflow: hidden;
+        max-height: 484px;
+        height:100%;
+
+    }
+
+    img {
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position: center;
+        opacity: 1;
+        transition: 10s;
+    }
+
+    img:hover .gifts__item:hover img {
+        transform: scale(1.5);
+    }
+
+
+
+    &__text {
+        position: absolute;
+        top: 0;
+        bottom:0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 40px;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        text-transform: uppercase;
+        color:$white;
+        text-decoration: none;
+
+    }
+
+    &__price {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 27px;
+        text-align: center;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color:inherit;
+    }
+}

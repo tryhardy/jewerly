@@ -9,6 +9,7 @@ block content
 		.container
 			ul.breadcrumbs__list
 				+breadcrumbs-item('Главная','/')
+				+breadcrumbs-item('Каталог', '/sections.html')
 				+breadcrumbs-item('Колье')
 	section.products-section
 		.container
@@ -25,12 +26,12 @@ block content
 						a(href="catalog.html").sort__link по алфавиту Я-А
 
 				.popular-products__list
-					+productItem("Кольцо с драгоценным камнем", "10 000 ₽", "static/images/common/product1.jpg", "static/images/common/product2.jpg", true)
-					+productItem("Золотая подвеска", "10 000 ₽", "static/images/common/product2.jpg", "static/images/common/product1.jpg")
-					+productItem("Подвеска с драгоценным камнем", "10 000 ₽", "static/images/common/product3.jpg", "static/images/common/product4.jpg")
-					+productItem("Кольцо с инкрустацией", "10 000 ₽", "static/images/common/product4.jpg","static/images/common/product5.jpg")
-					+productItem("Серьги с драгоценными камнями", "10 000 ₽", "static/images/common/product5.jpg", "static/images/common/product4.jpg")
-					+productItem("Подвеска с драгоценными камнями", "10 000 ₽", "static/images/common/product6.jpg", "static/images/common/product5.jpg")
+					+productItem("Кольцо с драгоценным камнем", "10 000 ₽", "static/images/catalog/6.png", "static/images/common/product2.jpg")
+					+productItem("Золотая подвеска", "10 000 ₽", "static/images/catalog/5.png", "static/images/common/product1.jpg", true)
+					+productItem("Подвеска с драгоценным камнем", "10 000 ₽", "static/images/catalog/4.png", "static/images/common/product4.jpg")
+					+productItem("Кольцо с инкрустацией", "10 000 ₽", "static/images/catalog/3.png","static/images/common/product5.jpg")
+					+productItem("Серьги с драгоценными камнями", "10 000 ₽", "static/images/catalog/2.png", "static/images/common/product4.jpg")
+					+productItem("Подвеска с драгоценными камнями", "10 000 ₽", "static/images/catalog/1.png", "static/images/common/product5.jpg")
 			
 			.navigation
 				.navigation__arrows
