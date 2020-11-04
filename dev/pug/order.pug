@@ -8,231 +8,158 @@ block content
 		.container
 			ul.breadcrumbs__list
 				+breadcrumbs-item('Главная','/')
+				+breadcrumbs-item('Каталог','/section.html')
 				+breadcrumbs-item('Оформление заказа')
 	section.page-section
-		.container
-			.cart
-				a(name='order_form')
-				#order_form_div.order-checkout
+		.order
+			.container
+				.title 
+					h2 Специальные предложения
+				form.order__form
+					.order__form-content
+						.order__column.order__column--large
+							h4.order__title Адрес получателя
+							.order__map-container 
+								div#map(style="width: 100%; height: 400px")
 
-				.bx_order_make
+							h4.order__title Город получения
+							.order__container
+								.order__address-info
+									.order__address-component
+										.order__address-row.not-empty
+											label
+												span Регион
+												select
+													option Регион
+													option Москва
+													option Калининград
+													option Киев
 
-					form#ORDER_FORM.cart-form(action='/cart/' method='POST' name='ORDER_FORM' enctype='multipart/form-data')
-					input#sessid(type='hidden' name='sessid' value='39a19148719ef1da34290846c53db82b')
-					#order_form_content
-						.main-wrapper
-						div
-							.cart-orders.cart-blank
-							h3.blank-title &Vcy;&acy;&shcy;&icy; &tcy;&ocy;&vcy;&acy;&rcy;&ycy;
-							table.order-table
-								tbody
-								tr
-									th &Ncy;&acy;&zcy;&vcy;&acy;&ncy;&icy;&iecy;
-									th &TScy;&iecy;&ncy;&acy;
-									th &Kcy;&ocy;&lcy;&icy;&chcy;&iecy;&scy;&tcy;&vcy;&ocy;
-									th &Scy;&ucy;&mcy;&mcy;&acy;
-								tr#tr_119755.item
-									td
-									.goods-name
-										a.delete-btn(data-id='119755' data-action='delete')
-										svg.goods-remove(width='14' height='14' viewbox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg')
-											path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z' fill='white')
-										.goods-name-wrapper
-										a.default-link(href='/catalog/complex/drops/feminus-edas-101/') &Fcy;&iecy;&mcy;&icy;&ncy;&ucy;&scy; &Ecy;&Dcy;&Acy;&Scy;-101
-										span.goods-category &Kcy;&acy;&tcy;&iecy;&gcy;&ocy;&rcy;&icy;&yacy;: &Kcy;&acy;&pcy;&lcy;&icy;
-									td#current_price_119755.item-price(data-price='200')
-									| 200 &#x20BD;
-									td
-									.centered
-										.basket_quantity_control
-										a.plus(href='javascript:void(0);' onclick="setQuantity(119755, 1, 'plus', false); submitForm();") +
-										input#QUANTITY_INPUT_119755.numbers(type='text' size='3' name='QUANTITY_INPUT_119755' maxlength='18' style='max-width: 50px' value='1' onchange="updateQuantity('QUANTITY_INPUT_119755', '119755', 0, false); submitForm();")
-										a.minus(href='javascript:void(0);' onclick="setQuantity(119755, 1, 'minus', false); submitForm();") -
-									input#QUANTITY_119755(type='hidden' name='QUANTITY_119755' value='1')
-									td#sum_119755.cost(data-cost='200')
-									| 200 &#x20BD;
-								tr#tr_119756.item
-									td
-									.goods-name
-										a.delete-btn(data-id='119756' data-action='delete')
-										svg.goods-remove(width='14' height='14' viewbox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg')
-											path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z' fill='white')
-										.goods-name-wrapper
-										a.default-link(href='/catalog/complex/drops/selen-edas-102/') &Scy;&iecy;&lcy;&iecy;&ncy; &Ecy;&Dcy;&Acy;&Scy;-102
-										span.goods-category &Kcy;&acy;&tcy;&iecy;&gcy;&ocy;&rcy;&icy;&yacy;: &Kcy;&acy;&pcy;&lcy;&icy;
-									td#current_price_119756.item-price(data-price='135')
-									| 135 &#x20BD;
-									td
-									.centered
-										.basket_quantity_control
-										a.plus(href='javascript:void(0);' onclick="setQuantity(119756, 1, 'plus', false); submitForm();") +
-										input#QUANTITY_INPUT_119756.numbers(type='text' size='3' name='QUANTITY_INPUT_119756' maxlength='18' style='max-width: 50px' value='3' onchange="updateQuantity('QUANTITY_INPUT_119756', '119756', 0, false); submitForm();")
-										a.minus(href='javascript:void(0);' onclick="setQuantity(119756, 1, 'minus', false); submitForm();") -
-									input#QUANTITY_119756(type='hidden' name='QUANTITY_119756' value='3')
-									td#sum_119756.cost(data-cost='405')
-									| 405 &#x20BD;
-							.cart-delivery.cart-blank
+										.order__address-row.not-empty
+											label
+												span Населенный пункт
+												select
+													option Населенный пункт
+													option Москва
+													option Калининград
+													option Киев
 
-							div(style='display:none')
-								input(type='hidden' name='PAY_SYSTEM_ID' value='2')
-								input#ID_PAY_SYSTEM_ID_2.form__radio(type='radio' name='PAY_SYSTEM_ID' value='2' checked='checked' onclick='changePaySystem();')
-								label.form__radio-label(for='ID_PAY_SYSTEM_ID_2' onclick="BX('ID_PAY_SYSTEM_ID_2').checked=true;changePaySystem();")
-								.row
-									.row__col-xs-80.row__no-indent-xs
-									| &Ocy;&pcy;&lcy;&acy;&tcy;&acy; &ncy;&acy;&lcy;&icy;&chcy;&ncy;&ycy;&mcy;&icy; &kcy;&ucy;&rcy;&softcy;&iecy;&rcy;&ucy;&nbsp;(&ocy;&pcy;&lcy;&acy;&tcy;&acy; &ncy;&acy;&lcy;&icy;&chcy;&ncy;&ycy;&mcy;&icy; &kcy;&ucy;&rcy;&softcy;&iecy;&rcy;&ucy; &pcy;&rcy;&icy; &vcy;&rcy;&ucy;&chcy;&iecy;&ncy;&icy;&icy; &zcy;&acy;&kcy;&acy;&zcy;&acy;)
-									.row__col-xs-20.row__no-indent-xs.text-xs-right
-							div
-								input#BUYER_STORE(type='hidden' name='BUYER_STORE' value='0')
-								h3.blank-title &Scy;&lcy;&ucy;&zhcy;&bcy;&acy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&icy;
-								.delivery-types
-								.delivery-item.delivery-item--active
-									input#DELIVERY_ID_1.form__radio(type='radio' name='DELIVERY_ID' value='1' checked='' onclick='submitForm();')
-									label(for='ID_DELIVERY_ID_1')
-									| &Kcy;&ucy;&rcy;&softcy;&iecy;&rcy;&scy;&kcy;&acy;&yacy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&acy; &pcy;&ocy; &gcy;. &Mcy;&ocy;&scy;&kcy;&vcy;&acy; (&dcy;&ocy; 1000 &rcy;&ucy;&bcy;.)&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-									div 300 &#x20BD;
-								.delivery-item
-									input#DELIVERY_ID_4.form__radio(type='radio' name='DELIVERY_ID' value='4' onclick='submitForm();')
-									label(for='ID_DELIVERY_ID_4')
-									| &Ncy;&acy;&lcy;&ocy;&zhcy;&iecy;&ncy;&ncy;&ycy;&mcy; &pcy;&lcy;&acy;&tcy;&iecy;&zhcy;&ocy;&mcy; &pcy;&ocy; &tcy;&iecy;&rcy;&rcy;&icy;&tcy;&ocy;&rcy;&icy;&icy; &Rcy;&ocy;&scy;&scy;&icy;&icy; (&dcy;&ocy; 1500 &rcy;&ucy;&bcy;.)&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-									div 370 &#x20BD;
-								.delivery-additional
-								textarea#ORDER_DESCRIPTION.order-comment(name='ORDER_DESCRIPTION' placeholder='Комментарии к заказу')
-								table.order-total
-									tbody
-									tr
-										td &Tcy;&ocy;&vcy;&acy;&rcy;&ycy;
-										td#allSum.cost 605
-									tr
-										td &Dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&acy;
-										td#deliverySum.cost 300
-									tr
-										td &Icy;&tcy;&ocy;&gcy;&ocy;
-										td#totalSum 905 &#x20BD;
-											
-						aside.cart-sidebar
-							span(style='display:none;')
-							input(type='text' name='PERSON_TYPE' value='1')
-							input(type='text' name='PERSON_TYPE_OLD' value='1')
-							h3.blank-title
-							strong &Acy;&dcy;&rcy;&iecy;&scy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&icy;
-							input#showProps(type='hidden' name='showProps' value='Y')
-							.row.form.form--order
-							#sale_order_props
-								.row__col-xs-100.row__col-lg-50.row__no-indent-xs
-								#LOCATION_ORDER_PROP_1
-									div(style='display:none')
-									select#COUNTRYORDER_PROP_1(disabled='' name='COUNTRYORDER_PROP_1' onchange="getLocation(this.value, '', '', {'COUNTRY_INPUT_NAME':'COUNTRY','REGION_INPUT_NAME':'REGION','CITY_INPUT_NAME':'ORDER_PROP_1','CITY_OUT_LOCATION':'Y','ALLOW_EMPTY_CITY':'Y','ONCITYCHANGE':'submitForm()'}, 's1', 'N')" type='location')
-										option (&vcy;&ycy;&bcy;&iecy;&rcy;&icy;&tcy;&iecy; &scy;&tcy;&rcy;&acy;&ncy;&ucy;)
-										option(value='19' selected='selected') &Rcy;&ocy;&scy;&scy;&icy;&yacy;
-									select#REGION_SELECT.form__item.form__select(name='REGIONORDER_PROP_1' onchange="submitCity(19, this.value, '', {'COUNTRY_INPUT_NAME':'COUNTRY','REGION_INPUT_NAME':'REGION','CITY_INPUT_NAME':'ORDER_PROP_1','CITY_OUT_LOCATION':'Y','ALLOW_EMPTY_CITY':'Y','ONCITYCHANGE':'submitForm()'}, 's1', 'N')" type='location')
-									option (&vcy;&ycy;&bcy;&iecy;&rcy;&icy;&tcy;&iecy; &rcy;&iecy;&gcy;&icy;&ocy;&ncy;)
-									option(value='1259') &Mcy;&ocy;&scy;&kcy;&vcy;&acy;
-									option(value='1260') &Scy;&acy;&ncy;&kcy;&tcy;-&Pcy;&iecy;&tcy;&iecy;&rcy;&bcy;&ucy;&rcy;&gcy;
-									option(value='20') &Acy;&dcy;&ycy;&gcy;&iecy;&yacy; &Rcy;&iecy;&scy;&pcy;
-									option(value='52') &Acy;&lcy;&tcy;&acy;&jcy; &Rcy;&iecy;&scy;&pcy;
-									option(value='205') &Acy;&lcy;&tcy;&acy;&jcy;&scy;&kcy;&icy;&jcy; &kcy;&rcy;&acy;&jcy;
-									option(value='310') &Acy;&mcy;&ucy;&rcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='321') &Acy;&rcy;&khcy;&acy;&ncy;&gcy;&iecy;&lcy;&softcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='335') &Acy;&scy;&tcy;&rcy;&acy;&khcy;&acy;&ncy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='23') &Bcy;&acy;&shcy;&kcy;&ocy;&rcy;&tcy;&ocy;&scy;&tcy;&acy;&ncy; &Rcy;&iecy;&scy;&pcy;
-									option(value='342') &Bcy;&iecy;&lcy;&gcy;&ocy;&rcy;&ocy;&dcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='354') &Bcy;&rcy;&yacy;&ncy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='45') &Bcy;&ucy;&rcy;&yacy;&tcy;&icy;&yacy; &Rcy;&iecy;&scy;&pcy;
-									option(value='371') &Vcy;&lcy;&acy;&dcy;&icy;&mcy;&icy;&rcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='395') &Vcy;&ocy;&lcy;&gcy;&ocy;&gcy;&rcy;&acy;&dcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='415') &Vcy;&ocy;&lcy;&ocy;&gcy;&ocy;&dcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='431') &Vcy;&ocy;&rcy;&ocy;&ncy;&iecy;&zhcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='54') &Dcy;&acy;&gcy;&iecy;&scy;&tcy;&acy;&ncy; &Rcy;&iecy;&scy;&pcy;
-									option(value='1201') &IEcy;&vcy;&rcy;&iecy;&jcy;&scy;&kcy;&acy;&yacy; &Acy;&ocy;&bcy;&lcy;
-									option(value='1177') &Zcy;&acy;&bcy;&acy;&jcy;&kcy;&acy;&lcy;&softcy;&scy;&kcy;&icy;&jcy; &kcy;&rcy;&acy;&jcy;
-									option(value='448') &Icy;&vcy;&acy;&ncy;&ocy;&vcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='65') &Icy;&ncy;&gcy;&ucy;&shcy;&iecy;&tcy;&icy;&yacy; &Rcy;&iecy;&scy;&pcy;
-									option(value='466') &Icy;&rcy;&kcy;&ucy;&tcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='70') &Kcy;&acy;&bcy;&acy;&rcy;&dcy;&icy;&ncy;&ocy;-&Bcy;&acy;&lcy;&kcy;&acy;&rcy;&scy;&kcy;&acy;&yacy; &Rcy;&iecy;&scy;&pcy;
-									option(value='490') &Kcy;&acy;&lcy;&icy;&ncy;&icy;&ncy;&gcy;&rcy;&acy;&dcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='79') &Kcy;&acy;&lcy;&mcy;&ycy;&kcy;&icy;&yacy; &Rcy;&iecy;&scy;&pcy;
-									option(value='513') &Kcy;&acy;&lcy;&ucy;&zhcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='538') &Kcy;&acy;&mcy;&chcy;&acy;&tcy;&scy;&kcy;&icy;&jcy; &kcy;&rcy;&acy;&jcy;
-									option(value='83') &Kcy;&acy;&rcy;&acy;&chcy;&acy;&iecy;&vcy;&ocy;-&CHcy;&iecy;&rcy;&kcy;&iecy;&scy;&scy;&kcy;&acy;&yacy; &Rcy;&iecy;&scy;&pcy;
-									option(value='88') &Kcy;&acy;&rcy;&iecy;&lcy;&icy;&yacy; &Rcy;&iecy;&scy;&pcy;
-									option(value='542') &Kcy;&iecy;&mcy;&iecy;&rcy;&ocy;&vcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='563') &Kcy;&icy;&rcy;&ocy;&vcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='102') &Kcy;&ocy;&mcy;&icy; &Rcy;&iecy;&scy;&pcy;
-									option(value='582') &Kcy;&ocy;&scy;&tcy;&rcy;&ocy;&mcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='218') &Kcy;&rcy;&acy;&scy;&ncy;&ocy;&dcy;&acy;&rcy;&scy;&kcy;&icy;&jcy; &kcy;&rcy;&acy;&jcy;
-									option(value='245') &Kcy;&rcy;&acy;&scy;&ncy;&ocy;&yacy;&rcy;&scy;&kcy;&icy;&jcy; &kcy;&rcy;&acy;&jcy;
-									option(value='1237') &Kcy;&rcy;&ycy;&mcy; &Rcy;&iecy;&scy;&pcy;
-									option(value='595') &Kcy;&ucy;&rcy;&gcy;&acy;&ncy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='605') &Kcy;&ucy;&rcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='616') &Lcy;&iecy;&ncy;&icy;&ncy;&gcy;&rcy;&acy;&dcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='658') &Lcy;&icy;&pcy;&iecy;&tscy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='667') &Mcy;&acy;&gcy;&acy;&dcy;&acy;&ncy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='113') &Mcy;&acy;&rcy;&icy;&jcy; &Ecy;&lcy; &Rcy;&iecy;&scy;&pcy;
-									option(value='118') &Mcy;&ocy;&rcy;&dcy;&ocy;&vcy;&icy;&yacy; &Rcy;&iecy;&scy;&pcy;
-									option(value='670') &Mcy;&ocy;&scy;&kcy;&ocy;&vcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='760') &Mcy;&ucy;&rcy;&mcy;&acy;&ncy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='1204') &Ncy;&iecy;&ncy;&iecy;&tscy;&kcy;&icy;&jcy; &Acy;&Ocy;
-									option(value='780') &Ncy;&icy;&zhcy;&iecy;&gcy;&ocy;&rcy;&ocy;&dcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='809') &Ncy;&ocy;&vcy;&gcy;&ocy;&rcy;&ocy;&dcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='821') &Ncy;&ocy;&vcy;&ocy;&scy;&icy;&bcy;&icy;&rcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='837') &Ocy;&mcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='844') &Ocy;&rcy;&iecy;&ncy;&bcy;&ucy;&rcy;&gcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='857') &Ocy;&rcy;&lcy;&ocy;&vcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='865') &Pcy;&iecy;&ncy;&zcy;&iecy;&ncy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='879') &Pcy;&iecy;&rcy;&mcy;&scy;&kcy;&icy;&jcy; &kcy;&rcy;&acy;&jcy;
-									option(value='269') &Pcy;&rcy;&icy;&mcy;&ocy;&rcy;&scy;&kcy;&icy;&jcy; &kcy;&rcy;&acy;&jcy;
-									option(value='905') &Pcy;&scy;&kcy;&ocy;&vcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='921') &Rcy;&ocy;&scy;&tcy;&ocy;&vcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='945') &Rcy;&yacy;&zcy;&acy;&ncy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='958') &Scy;&acy;&mcy;&acy;&rcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='970') &Scy;&acy;&rcy;&acy;&tcy;&ocy;&vcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='126') &Scy;&acy;&khcy;&acy; /&YAcy;&kcy;&ucy;&tcy;&icy;&yacy;/ &Rcy;&iecy;&scy;&pcy;
-									option(value='992') &Scy;&acy;&khcy;&acy;&lcy;&icy;&ncy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='1008') &Scy;&vcy;&iecy;&rcy;&dcy;&lcy;&ocy;&vcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='140') &Scy;&iecy;&vcy;&iecy;&rcy;&ncy;&acy;&yacy; &Ocy;&scy;&iecy;&tcy;&icy;&yacy; - &Acy;&lcy;&acy;&ncy;&icy;&yacy; &Rcy;&iecy;&scy;&pcy;
-									option(value='1057') &Scy;&mcy;&ocy;&lcy;&iecy;&ncy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='282') &Scy;&tcy;&acy;&vcy;&rcy;&ocy;&pcy;&ocy;&lcy;&softcy;&scy;&kcy;&icy;&jcy; &kcy;&rcy;&acy;&jcy;
-									option(value='1073') &Tcy;&acy;&mcy;&bcy;&ocy;&vcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='147') &Tcy;&acy;&tcy;&acy;&rcy;&scy;&tcy;&acy;&ncy; &Rcy;&iecy;&scy;&pcy;
-									option(value='1082') &Tcy;&vcy;&iecy;&rcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='1106') &Tcy;&ocy;&mcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='1113') &Tcy;&ucy;&lcy;&softcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='170') &Tcy;&ycy;&vcy;&acy; &Rcy;&iecy;&scy;&pcy;
-									option(value='1133') &Tcy;&yucy;&mcy;&iecy;&ncy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='176') &Ucy;&dcy;&mcy;&ucy;&rcy;&tcy;&scy;&kcy;&acy;&yacy; &Rcy;&iecy;&scy;&pcy;
-									option(value='1139') &Ucy;&lcy;&softcy;&yacy;&ncy;&ocy;&vcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='302') &KHcy;&acy;&bcy;&acy;&rcy;&ocy;&vcy;&scy;&kcy;&icy;&jcy; &kcy;&rcy;&acy;&jcy;
-									option(value='183') &KHcy;&acy;&kcy;&acy;&scy;&icy;&yacy; &Rcy;&iecy;&scy;&pcy;
-									option(value='1206') &KHcy;&acy;&ncy;&tcy;&ycy;-&Mcy;&acy;&ncy;&scy;&icy;&jcy;&scy;&kcy;&icy;&jcy; &Acy;&vcy;&tcy;&ocy;&ncy;&ocy;&mcy;&ncy;&ycy;&jcy; &ocy;&kcy;&rcy;&ucy;&gcy; - &YUcy;&gcy;&rcy;&acy; &Acy;&Ocy;
-									option(value='1146') &CHcy;&iecy;&lcy;&yacy;&bcy;&icy;&ncy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									option(value='189') &CHcy;&iecy;&chcy;&iecy;&ncy;&scy;&kcy;&acy;&yacy; &Rcy;&iecy;&scy;&pcy;
-									option(value='195') &CHcy;&ucy;&vcy;&acy;&shcy;&scy;&kcy;&acy;&yacy; &Rcy;&iecy;&scy;&pcy;
-									option(value='1223') &CHcy;&ucy;&kcy;&ocy;&tcy;&scy;&kcy;&icy;&jcy; &Acy;&Ocy;
-									option(value='1227') &YAcy;&mcy;&acy;&lcy;&ocy;-&Ncy;&iecy;&ncy;&iecy;&tscy;&kcy;&icy;&jcy; &Acy;&Ocy;
-									option(value='1188') &YAcy;&rcy;&ocy;&scy;&lcy;&acy;&vcy;&scy;&kcy;&acy;&yacy; &ocy;&bcy;&lcy;
-									div(style='display:none')
-									select#ORDER_PROP_1.form__item.form__select(name='ORDER_PROP_1' onchange='submitForm()' type='location')
-										option (&vcy;&ycy;&bcy;&iecy;&rcy;&icy;&tcy;&iecy; &gcy;&ocy;&rcy;&ocy;&dcy;)
-										option(value='19') (&dcy;&rcy;&ucy;&gcy;&ocy;&jcy;)
-								#wait_container_ORDER_PROP_1(style='display: none;')
+										.order__address-row
+											label
+												span Адрес
+												textarea
 
-								textarea#ORDER_PROP_2.form__textarea.form__textarea--order.form__item(name='ORDER_PROP_2' placeholder='Адрес* (Улица, дом, строение, подъезд, квартира и т.п.)')
-								input#ORDER_PROP_5.form__item.form__input(type='text' maxlength='250' value='' name='ORDER_PROP_5' placeholder='Индекс')
-								.row__col-xs-100.row__col-lg-50.row__no-indent-xs
-								input#ORDER_PROP_6.form__item.form__input(type='text' maxlength='250' value='' name='ORDER_PROP_6' placeholder='Фамилия')
-								input#ORDER_PROP_7.form__item.form__input(type='text' maxlength='250' value='' name='ORDER_PROP_7' placeholder='Имя')
-								input#ORDER_PROP_8.form__item.form__input(type='text' maxlength='250' value='' name='ORDER_PROP_8' placeholder='Отчество')
-								input#ORDER_PROP_10.form__item.form__input(type='tel' maxlength='250' value='' name='ORDER_PROP_10' placeholder='Телефон')
-								input#ORDER_PROP_9.form__item.form__input(type='email' maxlength='250' value='' name='ORDER_PROP_9' placeholder='E-mail')
+										.order__address-row
+											label
+												span Квартира
+												input
+
+											label
+												span Подъезд
+												input
+
+											label
+												span Этаж
+												input
+
+											label
+												span Индекс
+												input
+
+										.order__address-row
+											.order__address-desc
+												span.red *
+												span - обязательно для заполнения
+
+										.order__address-row
+											label
+												span Фамилия и Имя по паспорту
+												span.red *
+												input
+												.order__address-desc Полные фамилия, имя и отчество могут потребоваться при получении заказа
+
+										.order__address-row
+											label
+												span Email
+												span.red *
+												input
+
+											label
+												span Телефон
+												span.red *
+												input
+												.order__address-desc Номер телефона используется для оповещений об изменениях статуса заказа
+
+							h4.order__title Способ получения
+							.order__container
+								
+								.order__select
+									label
+										input(type="radio" name="delivery" value="Доставка")
+										span Доставка
+								
+								.order__select
+									label 
+										input(type="radio" name="delivery" value="Самовывоз")
+										span Самовывоз
 							
-							div(style='')
-							.row.form.form--order
-								.row__col-xs-100.row__col-lg-50.row__no-indent-xs
-								input#ORDER_PROP_11.form__item.form__input(type='text' maxlength='250' value='' name='ORDER_PROP_11' placeholder='Станция метро')
-					input#confirmorder(type='hidden' name='confirmorder' value='Y')
-					input#profile_change(type='hidden' name='profile_change' value='N')
-					input#is_ajax_post(type='hidden' name='is_ajax_post' value='Y')
-					.bx_ordercart_order_pay_center
-						a.form-order(href='javascript:void();' onclick="submitForm('Y'); return false;") &Ocy;&fcy;&ocy;&rcy;&mcy;&icy;&tcy;&softcy; &zcy;&acy;&kcy;&acy;&zcy;
+							h4.order__title Платежная система
+							.order__container
+								.order__select.active
+									label 
+										input(type="radio" name="payment" value="Доставка")
+										span Картой онлайн
+								
+								.order__select
+									label 
+										input(type="radio" name="payment" value="Самовывоз")
+										span Самовывоз
 
-							
+							h4.order__title Дополнительно
+							.order__container
+								.order__address-row
+									textarea(placeholder="Комментарий к заказу")
+						
+						.order__column.order__column--small
+							.order__info
+								.order__row
+									input(type="submit" value="Оформить заказ")
+
+								h4.order__title Ваш заказ
+								.order__row.order__row--justify
+									span Товары(1)
+									span 10000 ₽ 
+								.order__row.order__row--justify
+									span Сумма товаров
+									span 10000 ₽ 
+								
+								h4.order__title Доставка
+								.order__row.order__row--justify
+									span Способ получения
+									span Не указано
+								.order__row.order__row--justify
+									span Адрес доставки
+									span Не указано
+								.order__row.order__row--justify
+									span Стоимость доставки
+									span 0 ₽
+								.order__row.order__row--justify.order__row--bold
+									span Итого
+									span.order__red 10000 ₽
+
+								hr
+
+								h4.order__title Состав заказа
+								.order__row
+									a(href="product.html").order__item
+										.order__item-pic
+											img(src="static/images/common/product1.jpg")
+										.order__item-desc
+											h4.order__item-title Название товара
+											p.order__item-count 1 шт
+
+
+
+					.order__form-content
+						input.order__submit(type="submit" value="Оформить заказ")
+					

@@ -52,8 +52,21 @@ $(document).ready(function(){
           .addClass("active");
 
         $(".product__tabs-wrapper").css("transform", "translateX(" + ($(this).index() * -1 * 100) + "%)");
-      });
+    });
 
+
+    $(".hamburder-menu").on("click", function(){
+        $(".hamburder-menu").toggleClass("active");
+        $(".header-mobile").toggleClass("active");
+    });
+
+    $(".hamburger-close").on("click", function(){
+        $(".hamburder-menu").toggleClass("active");
+        $(".header-mobile").toggleClass("active");
+    });
+
+    //яндекс карты в оформлении заказа
+    ymaps.ready(init);
 
 });
 
@@ -68,9 +81,22 @@ function lightHeader(){
 function squarePic(currentClass){
 
     $(currentClass).each(function(){
-        let height = $(this).css("height");
-        console.log(height);
-        $(this).css("width", height);
+        let height = $(this).css("width");
+        $(this).css("height", height);
         //$(this).css("height", height);
+    });
+}
+
+function init(){
+    // Создание карты.
+    var myMap = new ymaps.Map("map", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [55.76, 37.64],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 7
     });
 }
