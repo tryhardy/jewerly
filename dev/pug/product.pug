@@ -35,6 +35,8 @@ block content
 									.slider-nav__item
 										.slider-nav__bg(style="background-image:url(static/images/common/ring3.jpg)")
 											img(src="static/images/common/ring3.jpg")
+								
+								
 						.product__column
 							.product__info
 								.product__instock В наличии
@@ -42,19 +44,20 @@ block content
 								.product__title Название товара
 								.product__subtitle Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
 								.product__price 10 000 ₽
-								.product__colors
-									.product__colors-title Цвет
-									.product__colors-list
-										.product__colors-item
-											img(src="static/images/color1.jpg")
-										.product__colors-item
-											img(src="static/images/color2.jpg")
-								.product__count
-									.product__count-title Количество
-									.product__count-block
-										input(type="text" value="1")
-										a.product__count-add
-										a.product__count-remove
+								.product__flex-mobile
+									.product__colors
+										.product__colors-title Цвет
+										.product__colors-list
+											.product__colors-item
+												img(src="static/images/color1.jpg")
+											.product__colors-item
+												img(src="static/images/color2.jpg")
+									.product__count
+										.product__count-title Количество
+										.product__count-block
+											input(type="text" value="1")
+											a.product__count-add
+											a.product__count-remove
 								.product__tocart
 									a(href="order.html").button.toCart Оформить заказ
 					.product__description
@@ -72,7 +75,7 @@ block content
 											p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.
 
 			
-			.products
+			.products.products-mobile
 				h3.simple-title С этим товаром также покупают
 				.popular-products__list
 					+productItem("Кольцо с драгоценным камнем", "10 000 ₽", "static/images/common/product1.jpg", "static/images/common/product2.jpg", true)

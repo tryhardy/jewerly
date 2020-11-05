@@ -1,4 +1,5 @@
 include ../helpers/mixins
+
 block variables
 
 doctype html
@@ -14,14 +15,16 @@ html(lang="ru-RU")
 		link(rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
 		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
 		link(rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css")
-	body.index-page
+	body
 		.wrapper
 			include ../modules/header
+			include ./../../ui-kit/ui-breadcrumbs/ui-breadcrumbs
 			.content
 				block content
-			include ../modules/footer
+			include ../modules/alternate-footer
 		script(src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js")
 		script(src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+		script(src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js")
 		script(src="https://api-maps.yandex.ru/2.1/?apikey=55b34d54-fd9a-4a74-9e06-2824aa0014e7&lang=ru_RU")
 		//script(src="static/js/libs.js")
 		script(src="static/js/main.js")

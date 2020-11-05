@@ -259,3 +259,58 @@
         font-size: 14px;
     }
 }
+
+.order__open-btn {
+    display: none;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    padding: 20px;
+    cursor: pointer;
+    align-items: center;
+
+    svg {
+        fill: #BABABA;
+    }
+
+    &-text {
+        display: flex;
+        align-items: center;
+        svg {
+            width: 12px;
+            height: 7px;
+            margin-left: 10px;
+            transform: rotate(180deg);
+            transition: .3s;
+        }
+    }
+
+    &-price {
+        flex: 1;
+        text-align: right;
+    }
+}
+.order__open-btn-icon {
+    margin-right: 15px;
+}
+
+
+
+#order-info {
+    
+    .open {
+        display:none;
+    }
+
+    .show {
+        display: block;
+    }
+}
+
+.order__tabs-mobile {
+    display: none;
+}
+
+.order__mobile-nav-block {
+    display: none;
+}
+
