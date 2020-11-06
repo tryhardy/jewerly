@@ -1,4 +1,41 @@
 $(document).ready(function(){
+    /*анимации на главной*/
+    productAnimation(".popular-products__item", 3);
+    productAnimation(".section-title");
+    productAnimation(".section-subtitle");
+    productAnimation(".video-section");
+    productAnimation(".video");
+    productAnimation(".reviews-section");
+    productAnimation(".reviews__item", 2);
+    productAnimation(".reviews__more");
+
+    /*анимации на странице спецпредложений*/
+    productAnimation(".title");
+    productAnimation(".gifts__item", 2);
+
+    lightHeader();
+    squarePic(".reviews__image-wrapper");
+
+    
+    $(window).on("scroll", function(e){
+        var isScrolling = false;
+        lightHeader();
+
+        /*анимации на главной*/
+        productAnimation(".popular-products__item", 3);
+        productAnimation(".section-title");
+        productAnimation(".section-subtitle");
+        productAnimation(".video-section");
+        productAnimation(".video");
+        productAnimation(".reviews-section");
+        productAnimation(".reviews__item", 2);
+        productAnimation(".reviews__more");
+
+        /*анимации на странице спецпредложений*/
+        productAnimation(".title");
+        productAnimation(".gifts__item", 2);
+    })
+
     $('.top-slider__list').slick({
         infinite: true,
         slidesToShow: 1,
@@ -10,15 +47,22 @@ $(document).ready(function(){
         cssEase: 'linear'
     });
 
-    lightHeader();
-    squarePic(".reviews__image-wrapper");
-
-    $(window).on("scroll", function(e){
-        lightHeader();
-    })
-
     $(window).resize(function(){
         squarePic(".reviews__image-wrapper");
+    });
+
+
+
+    /*ВИДЕО ПЛЕЕР YOUTUBE - START*/
+    $(".video__button").on("click", function(){
+        $(".video__bg").css("display", "none");
+        $(".video__button").addClass("inactive");
+        playVideo();
+    });
+    $(".video__bg").on("click", function(){
+        $(".video__bg").css("display", "none");
+        $(".video__button").addClass("inactive");
+        playVideo();
     });
 
     //карточка товара
@@ -69,18 +113,7 @@ $(document).ready(function(){
         $(".product__tabs-wrapper").css("transform", "translateX(" + ($(this).index() * -1 * 100) + "%)");
     });
 
-
-    $(".hamburder-menu").on("click", function(){
-        $(".hamburder-menu").toggleClass("active");
-        $(".header-mobile").toggleClass("active");
-    });
-
-    $(".hamburger-close").on("click", function(){
-        $(".hamburder-menu").toggleClass("active");
-        $(".header-mobile").toggleClass("active");
-    });
-
-    //Мобильное меню
+    /* МОБИЛЬНОЕ МЕНЮ - START*/
     $(".menu-mob__btn").on("click", function(){
         let item = $(".menu-mob__btn").closest(".menu-mob__item--has-submenu");
         let submenu = item.find(".menu-mob__submenu");
@@ -92,14 +125,21 @@ $(document).ready(function(){
             item.addClass("active-item");
             submenu.css("height", submenuHeight + "px");
         }
-        
+    });
+ 
+    $(".hamburder-menu").on("click", function(){
+        $(".hamburder-menu").toggleClass("active");
+        $(".header-mobile").toggleClass("active");
     });
 
+    $(".hamburger-close").on("click", function(){
+        $(".hamburder-menu").toggleClass("active");
+        $(".header-mobile").toggleClass("active");
+    });
+    /* МОБИЛЬНОЕ МЕНЮ - END*/
 
-
-    /*ОФОРМЛЕНИЕ ЗАКАЗА*/
-
-    //яндекс карты в оформлении заказа
+    /*ОФОРМЛЕНИЕ ЗАКАЗА - START*/
+    /*яндекс карты в оформлении заказа*/
     ymaps.ready(init);
 
     /*кнопка сворачивает инфо о заказе в мобилке*/
@@ -167,6 +207,7 @@ $(document).ready(function(){
         }
     });
 
+    /*работа кнопок перехода к следующему этапу заказа*/
     $(".order__next").on("click", function(e){
         e.preventDefault();
         let currentTabId = $(this).attr("data-tab");
@@ -204,10 +245,129 @@ function squarePic(currentClass){
     });
 }
 
+/*инициирцет яндекс карты в оформлении заказа */
 function init(){
     // Создание карты.
     var myMap = new ymaps.Map("map", {
         center: [55.76, 37.64],
         zoom: 7
     });
+}
+
+function productAnimation(className, colsCount = 1){
+    let item = $(className);
+    if(colsCount == 3) {
+        item.each(function(index){
+            let pixelsLeft = $(this).offset().top - ($(window).scrollTop() + $(window).height() - 100);
+            if(pixelsLeft < 0){
+                if(index < 3) {
+                    if(index == 0) {
+                        $(this).css("transition", "all .3s ease-in-out .1s");
+                    } else if(index == 1) {
+                        $(this).css("transition", "all .3s ease-in-out .2s");
+                    } else if(index == 2){
+                        $(this).css("transition", "all .3s ease-in-out .3s");
+                    }
+                } else {
+                    if(Number.isInteger(index/3)){
+                        $(this).css("transition", "all .3s ease-in-out .1s");
+                    } else if(Number.isInteger(index/2)) {
+                        $(this).css("transition", "all .3s ease-in-out .2s");
+                    } else {
+                        $(this).css("transition", "all .3s ease-in-out .3s");
+                    }
+                }
+                $(this).addClass("animate");
+            }
+        });
+    }
+    if(colsCount == 2) {
+        item.each(function(index){
+            let pixelsLeft = $(this).offset().top - ($(window).scrollTop() + $(window).height() - 100);
+            if(pixelsLeft < 0){
+                if(index < 2) {
+                    if(index == 0) {
+                        $(this).css("transition", "all .3s ease-in-out .1s");
+                    } else {
+                        $(this).css("transition", "all .3s ease-in-out .2s");
+                    }
+                } else {
+                    if(Number.isInteger(index/2)) {
+                        $(this).css("transition", "all .3s ease-in-out .2s");
+                    } else {
+                        $(this).css("transition", "all .3s ease-in-out .1s");
+                    }
+                }
+                $(this).addClass("animate");
+            }
+        });
+    }
+    if(colsCount == 1) {
+        item.each(function(index){
+            let pixelsLeft = $(this).offset().top - ($(window).scrollTop() + $(window).height() - 100);
+            if(pixelsLeft < 0){
+                $(this).css("transition", "all .3s ease-in-out .1s");
+                $(this).addClass("animate");
+            }
+        });
+    }
+}
+
+
+
+/* YOUTUBE VIDEO */
+/*подключаю скрипт с апи youtube*/
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var video;
+function onYouTubeIframeAPIReady() {
+    video = new YT.Player('video', {
+    height: '1000',
+    width: '100%',
+    videoId: 'MgnlbDVuPdg',
+    playerVars: {
+        autoplay: 0,
+        controls: 0,
+        iv_load_policy: 3,
+        modestbranding: 1,
+        showinfo:0,
+        rel:0,
+    },
+    events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+    }
+    });
+}
+
+
+/*Слушатель события*/
+function onPlayerReady(event) {
+}
+
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.ENDED) {
+        $(".video__bg").css("display", "block");
+        $(".video__button").removeClass("inactive");
+    }
+    
+    if (event.data == YT.PlayerState.PLAYING) {
+        $(".video__button").addClass("inactive");
+        $(".video__bg").css("display", "none");
+    }
+
+    if (event.data == YT.PlayerState.PAUSED) {
+
+    }
+}
+
+function stopVideo() {
+    video.stopVideo();
+}
+
+function playVideo() {
+    video.playVideo();
 }

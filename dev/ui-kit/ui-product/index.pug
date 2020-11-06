@@ -1,5 +1,5 @@
 mixin productItem(name, price, picUrl, picUrlSecond, colormark=false)
-    .popular-products__item
+    .popular-products__item.animation
         a(href="product.html")
             .popular-products__content(style=`background-image:url(${picUrlSecond})`)
                 img(src=`${picUrl}`)

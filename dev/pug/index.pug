@@ -14,7 +14,9 @@ block content
 						.container
 							.top-slider__wrapper
 								.top-slider__picture
-									img(src="static/images/logo-large.png").second
+									picture
+										source(srcset="static/images/logo-mob.png" media="(max-width: 720px)")
+										img(src="static/images/logo-large.png").second
 								h2.top-slider__title Ювелирные изделия ФК «Спартак»
 								.top-slider__button
 									a.top-slider__link(href="sections.html") к покупкам!
@@ -50,7 +52,7 @@ block content
 									a.top-slider__link(href="sections.html") к покупкам!
 	section.popular-section
 		.container
-			.section-title 
+			.section-title.animation 
 				h2 Популярные товары
 			.popular
 				.popular-products
@@ -62,24 +64,24 @@ block content
 						+productItem("Серьги с драгоценными камнями", "10 000 ₽", "static/images/common/product5.jpg", "static/images/common/product4.jpg")
 						+productItem("Подвеска с драгоценными камнями", "10 000 ₽", "static/images/common/product6.jpg", "static/images/common/product5.jpg")
 
-	section.video-section
+	section.video-section.animation
 		.container
-			.section-title 
+			.section-title.animation 
 				h2 Видео о наших украшениях
-			h3.section-subtitle Для настоящих болельщиков
+			h3.section-subtitle.animation Для настоящих болельщиков
 
-		.video
+		.video.animation
 			#video
 			.video__bg(style="background-image:url(static/images/common/video.jpg)")
 			.video__button
 
-	section.reviews-section
+	section.reviews-section.animation
 		.container
-			.section-title 
+			.section-title.animation
 				h2 Отзывы покупателей
 			.reviews
 				.reviews__list
-					.reviews__item
+					.reviews__item.animation
 						.reviews__image
 							.reviews__image-wrapper
 								img(src="static/images/common/review1.png")
@@ -88,7 +90,7 @@ block content
 							.reviews__date 2020-10-26
 							.reviews__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
 
-					.reviews__item
+					.reviews__item.animation
 						.reviews__image
 							.reviews__image-wrapper
 								img(src="static/images/common/review2.png")
@@ -98,6 +100,6 @@ block content
 							.reviews__text-wrapper
 							.reviews__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
 
-				.reviews__more
+				.reviews__more.animation
 					a(href="reviews.html").link.link--dark.link--centered Посмотреть больше отзывов
 	

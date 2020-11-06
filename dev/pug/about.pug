@@ -15,7 +15,8 @@ block content
 				h2 О компании
 			.page
 				section.about-section
-					img(src="static/images/common/about.jpg")
+					.picture
+						img(src="static/images/common/about.jpg")
 					br
 					p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 					ul.list
@@ -23,7 +24,7 @@ block content
 						li Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 						li Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 					p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-				hr
+				hr.mobile-hidden
 				section.certificates-section
 					.title.title--simple
 						h2 Сертификаты и соглашения
@@ -41,7 +42,7 @@ block content
 						a.gallery__pic(href="static/images/common/cert.jpg" data-fancybox="gallery")
 							img(src="static/images/common/cert.jpg")
 				br
-				hr
+				hr.mobile-hidden
 				section.warranty-section
 					.title.title--simple
 						h2 Гарантия и оригинальность
@@ -60,12 +61,12 @@ block content
 									</svg>
 
 								span Договор оферты
-				hr
+				hr.mobile-hidden
 				section.feedback-section
 					.title.title--simple
 						h2 Оставить отзыв
 						form.form
-							.form__row
+							.form__row.form__row--full-m
 								input.error(type="text", name="name", placeholder="Ваше имя")
 								input(type="text", name="email", placeholder="E-mail")
 							.form__row
